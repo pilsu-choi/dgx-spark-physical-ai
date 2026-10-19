@@ -29,6 +29,7 @@ A working Isaac Sim + Isaac Lab environment for robot learning, plus Cosmos worl
 | Isaac Sim 6.1 + Isaac Lab v3.0.0-EA | Installed, Cartpole RL smoke test passes ([runbook](runbooks/isaac-sim-lab.md)) |
 | Cosmos3-Nano text-to-video | Works at the official 720p/189-frame setting ([runbook](runbooks/cosmos3-nano.md)) |
 | Cosmos3-Nano image-to-video, action, reasoner | Not tested yet ([issue](issues/cosmos-untested-modes.md)) |
+| GR00T N1.7 + LeRobot (VLA, SO-101) | Installed; GR00T LIBERO inference 140 ms/step; no robot connected yet ([runbook](runbooks/gr00t-lerobot.md)) |
 
 ## Disk layout on the SSD
 
@@ -39,5 +40,8 @@ A working Isaac Sim + Isaac Lab environment for robot learning, plus Cosmos worl
 ├── cosmos/.venv           diffusers + torch for Cosmos (~6 GB)
 ├── cosmos/out/            generated videos
 ├── models/Cosmos3-Nano/   model weights (33 GB)
+├── vla/Isaac-GR00T/       GR00T N1.7 checkout + .venv + checkpoints/
+├── vla/lerobot/           LeRobot checkout + .venv
+├── vla/env-*.sh           environments for the groot / lerobot aliases
 └── cache/                 uv, pip, Omniverse, warp, HF, torch, CUDA caches (symlinked from $HOME)
 ```

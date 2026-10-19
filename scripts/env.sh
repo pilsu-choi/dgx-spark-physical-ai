@@ -4,4 +4,4 @@ export PATH=$HOME/.local/bin:$PATH
 export LD_PRELOAD=/lib/aarch64-linux-gnu/libgomp.so.1
 # accepts the NVIDIA Omniverse / Isaac Sim EULA non-interactively
 export OMNI_KIT_ACCEPT_EULA=YES ACCEPT_EULA=Y
-cd /mnt/ssd/isaac/IsaacLab
+builtin cd /mnt/ssd/isaac/IsaacLab

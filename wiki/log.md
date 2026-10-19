@@ -43,3 +43,11 @@ Times are UTC. Each entry links to the page with the details.
 - **00:55–01:41** 720p runs at 33, 93 and 189 frames: 268 s, 791 s, 1963 s; peak 45.1 GB.
   See [Cosmos3-Nano runbook](runbooks/cosmos3-nano.md).
 - **02:30** This repository created.
+- **11:10** VLA stack: Isaac-GR00T (N1.7, `dac54b3`) and LeRobot (`146d8474`) cloned to `/mnt/ssd/vla`.
+  GR00T has an official DGX Spark installer with prebuilt flash-attn/torchcodec wheels; its non-sudo part
+  ran as-is, the apt part went into `setup-sudo-vla.sh`. See [GR00T + LeRobot runbook](runbooks/gr00t-lerobot.md).
+- **11:15–11:30** GR00T venv (torch 2.10, CUDA 13.0) and LeRobot venv (torch 2.11+cu130) installed in
+  parallel; `Cosmos-Reason2-2B` (gated), `GR00T-N1.7-3B` and the LIBERO checkpoint downloaded.
+- **11:32** LIBERO checkpoint arrived without `config.json`; gvm's `cd` broke the env scripts
+  ([lesson](lessons/gvm-cd-and-hf-include.md)).
+- **11:33** GR00T N1.7 LIBERO PyTorch inference on GB10: 139.7 ms/step, open-loop MSE 0.00168.

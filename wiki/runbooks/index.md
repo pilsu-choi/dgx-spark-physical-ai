@@ -12,3 +12,4 @@ timestamp: 2026-10-19T02:30:00Z
 2. [External SSD](external-ssd.md) — mount, fstab, redirect caches
 3. [Isaac Sim + Isaac Lab](isaac-sim-lab.md) — install, run, smoke test
 4. [Cosmos3-Nano](cosmos3-nano.md) — install, text-to-video, measured performance
+5. [GR00T N1.7 + LeRobot](gr00t-lerobot.md) — VLA stack for SO-101, measured GR00T inference

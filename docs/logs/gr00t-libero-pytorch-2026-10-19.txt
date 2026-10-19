@@ -1,0 +1,24 @@
+Total number of DiT parameters:  1091722240
+Total number of SelfAttentionTransformer parameters:  201433088
+INFO:root:  PyTorch mode enabled
+INFO:root:Unnormalized Action MSE across single traj: 0.0024626099038869143
+INFO:root:Unnormalized Action MAE across single traj: 0.013575488701462746
+INFO:root:MSE for trajectory 0: 0.0024626099038869143, MAE: 0.013575488701462746
+INFO:root:Unnormalized Action MSE across single traj: 0.0010924822418019176
+INFO:root:Unnormalized Action MAE across single traj: 0.012734721414744854
+INFO:root:MSE for trajectory 1: 0.0010924822418019176, MAE: 0.012734721414744854
+INFO:root:Unnormalized Action MSE across single traj: 0.0014750018017366529
+INFO:root:Unnormalized Action MAE across single traj: 0.013734283857047558
+INFO:root:MSE for trajectory 2: 0.0014750018017366529, MAE: 0.013734283857047558
+INFO:root:  Average MSE across all trajs: 0.001677
+INFO:root:  Average MAE across all trajs: 0.013348
+INFO:root:  Model loading time:          17.9202s
+INFO:root:  Dataset loader creation:     0.0003s
+INFO:root:  Total episode loading:       0.9892s  (avg: 0.3297s)
+INFO:root:  Total data preparation:      0.0006s  (avg: 0.0000s per step)
+INFO:root:  Total inference:             10.0586s  (avg: 0.1397s per step)
+INFO:root:  Total inference steps:       72
+INFO:root:  Avg inference time per step: 0.1397s
+INFO:root:  Min inference time:          0.1337s
+INFO:root:  Max inference time:          0.1438s
+INFO:root:  P90 inference time:          0.1421s

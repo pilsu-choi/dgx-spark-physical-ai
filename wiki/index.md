@@ -17,7 +17,7 @@ Start with the [overview](overview.md).
 | Section | What is there |
 | --- | --- |
 | [overview.md](overview.md) | Hardware, goal, scope, current status |
-| [runbooks/](runbooks/index.md) | Step-by-step: SSH access, external SSD, Isaac Sim/Lab, Cosmos3-Nano |
+| [runbooks/](runbooks/index.md) | Step-by-step: SSH access, external SSD, Isaac Sim/Lab, Cosmos3-Nano, GR00T + LeRobot |
 | [decisions/](decisions/index.md) | Choices made and why |
 | [lessons/](lessons/index.md) | Things that went wrong and what they taught |
 | [research/](research/index.md) | What official docs and community reports say, checked against the machine |
