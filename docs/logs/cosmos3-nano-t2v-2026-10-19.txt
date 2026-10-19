@@ -1,0 +1,6 @@
+LOAD 216.8s  alloc=32.8GB
+RESULT 720x1280 33f 35steps  GEN 267.5s  peak_alloc=44.0GB  -> /mnt/ssd/cosmos/out/t2v_720x1280_33f_35s.mp4
+RESULT 720x1280 93f 35steps  GEN 790.5s  peak_alloc=44.4GB  -> /mnt/ssd/cosmos/out/t2v_720x1280_93f_35s.mp4
+RESULT 720x1280 189f 35steps  GEN 1962.9s  peak_alloc=45.1GB  -> /mnt/ssd/cosmos/out/t2v_720x1280_189f_35s.mp4
+LOAD 194.6s  alloc=32.8GB
+GEN 139.2s  peak_alloc=37.7GB
