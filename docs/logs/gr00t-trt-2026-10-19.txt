@@ -1,0 +1,63 @@
+# baseline (full_pipeline, --flat-e2e)
+GR00T N1.7 Inference Timing (4 denoising steps):
+
+| Device | Mode | E2E |
+|--------|------|-----|
+| GB10 | PyTorch Eager | 130.1 ms |
+| GB10 | torch.compile | 108.6 ms |
+| GB10 | TensorRT (n17_full_pipeline) | 96.0 ms |
+
+====================================================================================================
+DETAILED SUMMARY
+====================================================================================================
+
+Hardware: NVIDIA GB10
+Model: checkpoints/GR00T-N1.7-LIBERO/libero_10
+Action Horizon: 40
+Denoising Steps: 4
+
+PyTorch Eager:
+  E2E:             median=130.1 ms, mean=130.0 ± 2.0 ms, min=126.3, max=133.9 (7.7 Hz)
+
+torch.compile:
+  E2E:             median=108.6 ms, mean=109.4 ± 1.7 ms, min=106.9, max=112.4 (9.2 Hz)
+
+[Step 3/4] Verify complete -- cosine=0.999988 PASS (20s)
+  export        7 ONNX files (1m 02s)
+  build         7 engines (1m 22s)
+  verify        cosine=0.999988 PASS (20s)
+
+# optimized execution profile (--execution-profile optimized --batch-size 1)
+GR00T N1.7 Inference Timing (4 denoising steps):
+
+| Device | Mode | E2E |
+|--------|------|-----|
+| GB10 | PyTorch Eager | 130.9 ms |
+| GB10 | torch.compile | 110.3 ms |
+| GB10 | TensorRT (n17_full_pipeline) | 88.7 ms |
+
+====================================================================================================
+DETAILED SUMMARY
+====================================================================================================
+
+Hardware: NVIDIA GB10
+Model: checkpoints/GR00T-N1.7-LIBERO/libero_10
+Action Horizon: 40
+Denoising Steps: 4
+
+PyTorch Eager:
+  E2E:             median=130.9 ms, mean=130.8 ± 2.1 ms, min=126.9, max=134.4 (7.6 Hz)
+
+torch.compile:
+  E2E:             median=110.3 ms, mean=110.0 ± 2.1 ms, min=104.7, max=113.1 (9.1 Hz)
+
+  verify        cosine=0.999988 PASS (18s)
+
+# standalone_inference_script.py --inference-mode trt_full_pipeline (baseline engines), 3 LIBERO trajs
+INFO:root:  Average MSE across all trajs: 0.001600
+INFO:root:  Average MAE across all trajs: 0.013301
+INFO:root:  Model loading time:          19.9678s
+INFO:root:  Avg inference time per step: 0.0974s
+INFO:root:  Min inference time:          0.0911s
+INFO:root:  Max inference time:          0.1006s
+INFO:root:  P90 inference time:          0.0999s

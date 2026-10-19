@@ -51,3 +51,10 @@ Times are UTC. Each entry links to the page with the details.
 - **11:32** LIBERO checkpoint arrived without `config.json`; gvm's `cd` broke the env scripts
   ([lesson](lessons/gvm-cd-and-hf-include.md)).
 - **11:33** GR00T N1.7 LIBERO PyTorch inference on GB10: 139.7 ms/step, open-loop MSE 0.00168.
+- **11:40** TensorRT pipeline on the LIBERO checkpoint: verify cosine 0.999988; eager 130.1 ms →
+  compile 108.6 → TRT 96.0 → TRT + optimized profile 88.7 ms (NVIDIA's Spark table: 200.8 / 183.1 / 116.6).
+- **11:45** `izuluaga/finish_sandwich` (SO-101, 80 episodes) converted to LeRobot v2; 30-step probe:
+  ~3 s/step at batch 32, 82 GB peak.
+- **11:50–13:22** GR00T N1.7 fine-tune, 2,000 steps, 91.7 min, loss 1.14 → 0.051. Open-loop MSE
+  30.9 (ckpt 1000) → 20.4 (ckpt 2000). TRT on the fine-tuned checkpoint: 140.0 → 99.3 ms.
+  See [runbook §4](runbooks/gr00t-lerobot.md).

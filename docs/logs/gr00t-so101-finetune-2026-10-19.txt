@@ -1,0 +1,34 @@
+# GR00T N1.7 finetune on izuluaga/finish_sandwich (SO-101, 80 eps), 2000 steps, batch 32, 1x GB10
+{'loss': 1.1446
+{'loss': 0.1512
+{'loss': 0.1078
+{'loss': 0.0999
+{'loss': 0.087
+{'loss': 0.066
+{'loss': 0.0663
+{'loss': 0.0566
+{'loss': 0.0504
+{'loss': 0.05
+{'loss': 0.0508
+{'train_runtime': 5503.4064, 'train_samples_per_second': 11.629, 'train_steps_per_second': 0.363, 'train_loss': 0.13737248447537423}
+
+# open-loop eval, traj 0 10 40, execution-horizon 16, 400 steps
+## checkpoint-1000
+INFO:root:MSE for trajectory 0: 33.507450103759766, MAE: 3.7924976348876953
+INFO:root:MSE for trajectory 10: 30.0887393951416, MAE: 3.3790183067321777
+INFO:root:MSE for trajectory 40: 29.009469985961914, MAE: 3.5358328819274902
+INFO:root:Average MSE across all trajs: 30.868553161621094
+INFO:root:Average MAE across all trajs: 3.5691163539886475
+## checkpoint-2000
+INFO:root:MSE for trajectory 0: 17.734102249145508, MAE: 2.664733409881592
+INFO:root:MSE for trajectory 10: 24.464616775512695, MAE: 3.0759713649749756
+INFO:root:MSE for trajectory 40: 18.924983978271484, MAE: 2.677509069442749
+INFO:root:Average MSE across all trajs: 20.37456703186035
+INFO:root:Average MAE across all trajs: 2.8060712814331055
+
+# TRT (optimized profile) on checkpoint-2000
+  verify        cosine=1.000000 PASS (21s)
+[Step 3/4] Verify complete -- cosine=1.000000 PASS (21s)
+| GB10 | PyTorch Eager | 140.0 ms |
+| GB10 | TensorRT (n17_full_pipeline) | 99.3 ms |
+| GB10 | torch.compile | 120.5 ms |
